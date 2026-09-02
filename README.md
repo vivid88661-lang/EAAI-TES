@@ -78,9 +78,9 @@ python reproduce.py --mode multiseed
 The multiseed command is intentionally excluded from the default entry point:
 it retrains all models for seeds `42`, `123`, `2024` and `3407` and can take a
 long time. TensorFlow results are not promised to be bit-wise identical across
-CPU/GPU, driver and BLAS combinations. The expected statistical result is the
-same ranking and conclusion; `results/multiseed_metrics.csv` is the frozen
-reference reported in the manuscript.
+CPU/GPU, driver and BLAS combinations. The expected statistical result is consistent
+overall performance and unchanged main conclusions; `results/multiseed_metrics.csv`
+is the frozen reference reported in the manuscript.
 
 For a short software-path test, append `--smoke` to `--mode retrain` or
 `--mode multiseed`. Smoke outputs are software checks and must not be reported
