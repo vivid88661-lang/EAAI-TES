@@ -1,0 +1,4 @@
+supports,noise_percent,case_count,R2,MSE,RMSE,MAE,noise_variable,aggregation
+Table 11 and Table 12 (0%),0.0,7,0.8797036468014576,12.540739522723044,3.5412906577578527,2.3473337432670784,Tin_C,macro case mean; RMSE=sqrt(mean case-wise MSE)
+Table 12 (0.5%),0.5,7,0.8626888123371363,15.19464001217185,3.8980302733780623,2.886315306539797,Tin_C,macro case mean; RMSE=sqrt(mean case-wise MSE)
+Table 12 (1.0%),1.0,7,0.8250819354299133,21.21349415940066,4.605810912249944,3.6038366552270324,Tin_C,macro case mean; RMSE=sqrt(mean case-wise MSE)

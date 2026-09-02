@@ -1,0 +1,61 @@
+{
+  "release": "three-review frozen data-driven reproduction package",
+  "python_version": "3.10.11",
+  "window_length_samples": 30,
+  "sampling_interval_seconds": 30,
+  "forecast_horizon_steps": 1,
+  "group_kfold_splits": 5,
+  "primary_seed": 42,
+  "multiseed_values": [
+    42,
+    123,
+    2024,
+    3407
+  ],
+  "mainline_feature_sequence": [
+    "f_liquid_scaled",
+    "Tin_C_scaled",
+    "Tout_C_history_scaled",
+    "log1p_Q_J_history_scaled",
+    "Ri_m_scaled",
+    "L_m_scaled",
+    "Phi_scaled",
+    "delta_logQ_window_scaled"
+  ],
+  "mainline_targets": [
+    "Tout_C",
+    "log1p_Q_J"
+  ],
+  "mainline_models": [
+    "BLSTM-XGB",
+    "CNN-BLSTM",
+    "BLSTM-SA",
+    "LCA-Stacking"
+  ],
+  "restricted_input_sequence": [
+    "Tin_C_scaled",
+    "Tout_C_history_scaled",
+    "Q_cum_J_history_quantile_scaled",
+    "Ri_m_scaled",
+    "L_m_scaled",
+    "Phi_scaled",
+    "delta_Q_window_scaled"
+  ],
+  "restricted_noise_variable": "Tin_C",
+  "restricted_noise_fractions": [
+    0.0,
+    0.005,
+    0.01
+  ],
+  "metric_notes": {
+    "Tables_6_9": "pooled prediction-row metrics",
+    "Tables_11_12": "R2, MSE and MAE are macro means over seven held-out cases; reported RMSE is sqrt(mean case-wise MSE)"
+  },
+  "scope_exclusions": [
+    "Table 10 1D/2D comparison",
+    "2D MATLAB source solver",
+    "1D ROM source code",
+    "Lacroix validation processing",
+    "internal audit and development history"
+  ]
+}

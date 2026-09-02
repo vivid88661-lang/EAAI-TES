@@ -1,0 +1,23 @@
+{
+  "role": "restricted-input Tables 11-12 held-out cases",
+  "selection": "20% complete-workbook hold-out across Ri=0.01, 0.0125 and 0.03",
+  "seed": 42,
+  "case_ids_in_saved_training_order": [
+    "D030",
+    "D013",
+    "D002",
+    "D025",
+    "D023",
+    "D012",
+    "D010"
+  ],
+  "case_ids_in_evaluation_order": [
+    "D010",
+    "D002",
+    "D012",
+    "D013",
+    "D023",
+    "D025",
+    "D030"
+  ]
+}
