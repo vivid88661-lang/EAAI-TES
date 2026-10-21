@@ -128,8 +128,13 @@ file definitions.
 ## Availability and citation
 
 The processed simulation data supporting the data-driven results are included
-under `data/`. The source numerical solvers and the third-party experimental
-benchmark are not redistributed. The latter should be accessed from the
+under `data/`. The E01/E02 sampled trajectories and processed data for the
+revision are provided under `supplementary_analysis/data/`. Numerical solver
+source code, including solver adapters and material-property routines for
+E01/E02, is not distributed in this repository. The public package supports
+data-driven model training and evaluation using the supplied simulation data;
+regeneration of the numerical simulations is outside its scope. The third-party
+experimental benchmark is not redistributed and should be accessed from the
 published reference cited in the manuscript.
 
 ## Review-use notice
@@ -144,3 +149,17 @@ be stated explicitly in a later release.
 
 When the manuscript is accepted, replace this paragraph with the final article
 citation and archive a tagged repository release in a DOI-issuing repository.
+
+## Supplementary analysis for the 18 October 2026 revision
+
+The additional experiments reported in revised Table 8 and Appendix Tables
+A4-A6 are available in [supplementary_analysis](supplementary_analysis/README.md).
+They include persistence and linear-trend baselines, direct forecasts at
+30 s, 5 min and 15 min, the state-anchored LCA implementation, four-seed
+results, and the E01/E02 external-condition data and predictions.
+
+Run `python supplementary_analysis/reproduce.py` from the repository root
+to verify the source data and reconstruct the supplementary tables.
+The original code, entry points and frozen models are retained. Table
+numbers in the original README refer to the earlier manuscript version;
+the supplementary README provides the mapping for this revision.
